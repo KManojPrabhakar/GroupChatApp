@@ -285,5 +285,76 @@ define({ "api": [
     "filename": "routes/user.js",
     "groupTitle": "users",
     "name": "PostApiV1UsersLogout"
+  },
+  {
+    "group": "users",
+    "version": "1.0.0",
+    "type": "post",
+    "url": "/api/v1/users/signup",
+    "title": "api for user signup.",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "email",
+            "description": "<p>email of the user. (body params) (required)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "firstName",
+            "description": "<p>firstName of the user. (body params) (required)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "lastName",
+            "description": "<p>lastName of the user. (body params) (required)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "mobileNumber",
+            "description": "<p>mobileNumber of the user. (body params) (required)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "password",
+            "description": "<p>password of the user. (body params) (required)</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "object",
+            "optional": false,
+            "field": "myResponse",
+            "description": "<p>shows error status, message, http status code, result.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"error\": false,\n    \"message\": \"User created\",\n    \"status\": 200,\n    \"data\": {\n        \"userId\": \"Hk_gk8QMQ\",\n        \"firstName\": \"Manoj\",\n        \"lastName\": \"Prabhakar\",\n        \"email\": \"13691a05544@gmail.com\",\n        \"mobileNumber\": 8985835946,\n        \"createdOn\": \"2018-06-29T06:17:20.000Z\",\n        \"_id\": \"5b35cef0b2926515500d4b73\",\n        \"__v\": 0\n    }\n}",
+          "type": "object"
+        }
+      ]
+    },
+    "filename": "routes/user.js",
+    "groupTitle": "users",
+    "name": "PostApiV1UsersSignup"
   }
 ] });
